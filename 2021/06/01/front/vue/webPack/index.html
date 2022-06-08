@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html lang="zh-CN" data-default-color-scheme=auto>
+<html lang="zh-CN" data-default-color-scheme=light>
 
 
 
@@ -23,13 +23,14 @@
 <meta property="og:site_name" content="小熊的小窝">
 <meta property="og:description" content="前言 概述：webpack实现前端项目的模块化，旨在更高效地管理和维护项目中的每一个资源">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.zengzx.xyz/2021/06/01/image/webPack_1.png">
 <meta property="article:published_time" content="2021-06-01T15:54:43.000Z">
-<meta property="article:modified_time" content="2022-05-30T05:54:56.545Z">
+<meta property="article:modified_time" content="2022-06-06T06:58:51.546Z">
 <meta property="article:author" content="Eden">
 <meta property="article:tag" content="前端">
 <meta property="article:tag" content="Vue">
-<meta property="article:tag" content="webpack">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.zengzx.xyz/2021/06/01/image/webPack_1.png">
   
   
   
@@ -71,7 +72,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"www.zengzx.xyz","root":"/","version":"1.9.0","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"www.zengzx.xyz","root":"/","version":"1.9.0","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":10},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -219,7 +220,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          558 字
+          3.1k 字
         
       </span>
     
@@ -230,7 +231,7 @@
         
         
         
-          5 分钟
+          26 分钟
         
       </span>
     
@@ -295,13 +296,77 @@ devDependencies - dev环境需要的生产不需要的包，命令中添加-D</p
 </ol>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-built_in">module</span>.exports = &#123;<br>    <span class="hljs-attr">mode</span>: <span class="hljs-string">&quot;development&quot;</span><br>&#125;<br></code></pre></td></tr></table></figure>
 <ol start="2">
-<li>在package.json的scripts节点下，新增dev脚本如下：</li>
+<li>在package.json的scripts节点下，新增dev和build<br>
+scripts：可运行脚本</li>
 </ol>
-<p>scripts：可运行脚本</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-string">&quot;scripts&quot;</span>: &#123;<br>  <span class="hljs-string">&quot;dev&quot;</span>: <span class="hljs-string">&quot;webpack&quot;</span><br>&#125;,<br></code></pre></td></tr></table></figure>
-<ol start="3">
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-string">&quot;scripts&quot;</span>: &#123;<br>  <span class="hljs-string">&quot;dev&quot;</span>: <span class="hljs-string">&quot;webpack server&quot;</span>,<br>  <span class="hljs-string">&quot;build&quot;</span>: <span class="hljs-string">&quot;webpack --mode production&quot;</span><br>&#125;<br></code></pre></td></tr></table></figure>
+<ol>
 <li>在终端数据npm run dev完成打包构建</li>
 </ol>
+<h3 id="2-3-指定entry和output"><a class="header-anchor" href="#2-3-指定entry和output">¶</a>2.3 指定entry和output</h3>
+<p>默认情况下，打包入口文件为：src -&gt; index.js<br>
+默认情况下，打包输出文件为：dist -&gt; main.js</p>
+<p>在 webpack.config.js 文件中，通过entry节点指定打包的入口，通过output节点指定打包的出口。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-built_in">module</span>.exports = &#123;<br>    <span class="hljs-attr">mode</span>: <span class="hljs-string">&quot;development&quot;</span>,<br><br>    <span class="hljs-comment">//指定处理哪个文件</span><br>    <span class="hljs-attr">entry</span>: path.join(__dirname, <span class="hljs-string">&quot;./src/index.js&quot;</span>),<br>    <span class="hljs-comment">//指定生成文件存放目录</span><br>    <span class="hljs-attr">output</span>: &#123;<br>        <span class="hljs-attr">path</span>: path.join(__dirname, <span class="hljs-string">&quot;dist&quot;</span>),<br>        <span class="hljs-attr">filename</span>: <span class="hljs-string">&quot;bundle.js&quot;</span><br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+<h3 id="2-4-devServer常用选项"><a class="header-anchor" href="#2-4-devServer常用选项">¶</a>2.4  devServer常用选项</h3>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-built_in">module</span>.exports = &#123;<br>    <span class="hljs-attr">mode</span>: <span class="hljs-string">&quot;development&quot;</span>,<br>    <span class="hljs-attr">plugins</span>: [htmlPlugin],<br>    <span class="hljs-attr">devServer</span>: &#123;<br>        <span class="hljs-attr">open</span>: <span class="hljs-literal">true</span>, <span class="hljs-comment">// 自动打开浏览器</span><br>        <span class="hljs-attr">port</span>: <span class="hljs-number">8081</span>, <span class="hljs-comment">// 修改端口</span><br>        <span class="hljs-attr">host</span>: <span class="hljs-string">&#x27;127.0.0.1&#x27;</span> <span class="hljs-comment">// 指定地址</span><br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h2 id="3-webpack-dev-server插件"><a class="header-anchor" href="#3-webpack-dev-server插件">¶</a>3. webpack-dev-server插件</h2>
+<p>热更新，自动生成输出文件，安装命令如下</p>
+<h3 id="3-1-安装"><a class="header-anchor" href="#3-1-安装">¶</a>3.1 安装</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install webpack-dev-server@3.11.2 -D<br></code></pre></td></tr></table></figure>
+<h3 id="3-2-配置"><a class="header-anchor" href="#3-2-配置">¶</a>3.2 配置</h3>
+<ol>
+<li>修改package.json中的配置如下，在webpack后加上server</li>
+</ol>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-string">&quot;scripts&quot;</span>: &#123;<br>  <span class="hljs-attr">&quot;dev&quot;</span>: <span class="hljs-string">&quot;webpack server&quot;</span><br>&#125;,<br></code></pre></td></tr></table></figure>
+<ol start="2">
+<li>
+<p>再次运行npm run dev命令</p>
+</li>
+<li>
+<p>如果启动失败，遇到以下问题：<br>
+<img src="../../../image/webPack_1.png" srcset="/img/loading.gif" lazyload alt="启动失败"><br>
+则需要额外安装</p>
+</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm i --save-dev webpack-cli  -D<br></code></pre></td></tr></table></figure>
+<h3 id="3-3-工作原理"><a class="header-anchor" href="#3-3-工作原理">¶</a>3.3 工作原理</h3>
+<p>webpack会把输出文件放在内存中，所以可以在保存文件后进行打包编译，实现热更新</p>
+<h2 id="4-html-webpack-plugin插件"><a class="header-anchor" href="#4-html-webpack-plugin插件">¶</a>4. html-webpack-plugin插件</h2>
+<h3 id="4-1-安装"><a class="header-anchor" href="#4-1-安装">¶</a>4.1 安装</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install html-webpack-plugin@5.3.2 -D<br></code></pre></td></tr></table></figure>
+<h3 id="4-2-配置"><a class="header-anchor" href="#4-2-配置">¶</a>4.2 配置</h3>
+<p>修改package.json中的配置如下，在webpack后加上server</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">//导入插件</span><br><span class="hljs-keyword">const</span> HtmlPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;html-webpack-plugin&quot;</span>);<br><span class="hljs-comment">//创建实例</span><br><span class="hljs-keyword">const</span> htmlPlugin = <span class="hljs-keyword">new</span> HtmlPlugin(&#123;<br>    <span class="hljs-comment">//源文件</span><br>    <span class="hljs-attr">template</span>: <span class="hljs-string">&#x27;./src/index.html&#x27;</span>,<br>    <span class="hljs-comment">//被复制的文件</span><br>    <span class="hljs-attr">filename</span>: <span class="hljs-string">&#x27;./index.html&#x27;</span><br>&#125;)<br><span class="hljs-comment">//使用插件</span><br><span class="hljs-built_in">module</span>.exports = &#123;<br>    <span class="hljs-attr">mode</span>: <span class="hljs-string">&quot;development&quot;</span>,<br>    <span class="hljs-attr">plugins</span>: [htmlPlugin]<br>&#125;<br></code></pre></td></tr></table></figure>
+<h3 id="4-3-特性"><a class="header-anchor" href="#4-3-特性">¶</a>4.3 特性</h3>
+<ol>
+<li>将指定的html文件复制到指定目录下</li>
+<li>注入生成的js文件</li>
+</ol>
+<h2 id="5-loader"><a class="header-anchor" href="#5-loader">¶</a>5. loader</h2>
+<p>webpack只能打包js结尾的文件，其他非js结尾的文件由loader打包特定文件，比如：css-loader<br>
+当webpack发现某个文件不能处理时，回去找相应的loader处理</p>
+<h3 id="5-1-style-loader、css-loader"><a class="header-anchor" href="#5-1-style-loader、css-loader">¶</a>5.1 style-loader、css-loader</h3>
+<h4 id="5-1-1-安装"><a class="header-anchor" href="#5-1-1-安装">¶</a>5.1.1 安装</h4>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install style-loader@3.0.0 css-loader@5.2.6 -D<br></code></pre></td></tr></table></figure>
+<h4 id="5-1-2-配置"><a class="header-anchor" href="#5-1-2-配置">¶</a>5.1.2 配置</h4>
+<p>在webpack.config.js的module -&gt; rules中配置loader规则</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-built_in">module</span>: &#123;<br>    <span class="hljs-attr">rules</span>: [&#123;<br>        <span class="hljs-attr">test</span>: <span class="hljs-regexp">/\.css$/</span>,<br>        use: [<span class="hljs-string">&#x27;style-loader&#x27;</span>, <span class="hljs-string">&#x27;css-loader&#x27;</span>] <span class="hljs-comment">// 从后往前调用，依次处理</span><br>    &#125;]<br>&#125;<br></code></pre></td></tr></table></figure>
+<h3 id="5-2-url-loader"><a class="header-anchor" href="#5-2-url-loader">¶</a>5.2 url-loader</h3>
+<h4 id="5-2-1-安装"><a class="header-anchor" href="#5-2-1-安装">¶</a>5.2.1 安装</h4>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install url-loader@4.1.1 file-loader@6.2.0 -D<br></code></pre></td></tr></table></figure>
+<h4 id="5-2-2-配置"><a class="header-anchor" href="#5-2-2-配置">¶</a>5.2.2 配置</h4>
+<p>在webpack.config.js的module -&gt; rules中配置loader规则</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-built_in">module</span>: &#123;<br>    <span class="hljs-attr">rules</span>: [&#123;<br>        <span class="hljs-attr">test</span>: <span class="hljs-regexp">/\.jpg|png|gif$/</span>,<br>        use: [<span class="hljs-string">&#x27;url-loader?limit=22229&#x27;</span>] <span class="hljs-comment">// ?之后是loader的参数项，只有小于limit的图片，才会转换为base64</span><br>    &#125;]<br>&#125;<br></code></pre></td></tr></table></figure>
+<h3 id="5-3-label-loader"><a class="header-anchor" href="#5-3-label-loader">¶</a>5.3 label-loader</h3>
+<p>转换处理js中webpack不能处理得一些高级语法</p>
+<h4 id="5-3-1-安装"><a class="header-anchor" href="#5-3-1-安装">¶</a>5.3.1 安装</h4>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install babel-loader@8.2.2 @babel/core@7.14.6 @babel/plugin-proposal-decorators@7.14.5 -D<br></code></pre></td></tr></table></figure>
+<h4 id="5-3-2-配置"><a class="header-anchor" href="#5-3-2-配置">¶</a>5.3.2 配置</h4>
+<p>在webpack.config.js的module -&gt; rules中配置loader规则</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-built_in">module</span>: &#123;<br>    <span class="hljs-attr">rules</span>: [&#123;<br>        <span class="hljs-attr">test</span>: <span class="hljs-regexp">/\.js$/</span>,<br>        use: [<span class="hljs-string">&#x27;babel-loader&#x27;</span>], <span class="hljs-comment">// ?之后是loader的参数项，只有小于limit的图片，才会转换为base64</span><br>        <span class="hljs-attr">exlude</span>: <span class="hljs-regexp">/node_modules/</span> <span class="hljs-comment">// 排除不需要处理得代码</span><br>    &#125;]<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>在根目录下创建babel.config.js，并在此文件中添加可用插件</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-built_in">module</span>.exports = &#123;<br>    <span class="hljs-comment">// 生命babel可用得插件</span><br>    <span class="hljs-attr">plugins</span>: [[<span class="hljs-string">&#x27;@babel/plugin-proposal-decorators&#x27;</span>, &#123;<span class="hljs-attr">legacy</span>: <span class="hljs-literal">true</span>&#125;]]<br>&#125;<br><br></code></pre></td></tr></table></figure>
 
               
             </div>
@@ -319,12 +384,12 @@ devDependencies - dev环境需要的生产不需要的包，命令中添加-D</p
     
       <span class="category-chain">
         
-  <a href="/categories/Vue/" class="category-chain-item">Vue</a>
+  <a href="/categories/%E5%89%8D%E7%AB%AF/" class="category-chain-item">前端</a>
   
   
     <span>></span>
     
-  <a href="/categories/Vue/%E5%89%8D%E7%AB%AF/" class="category-chain-item">前端</a>
+  <a href="/categories/%E5%89%8D%E7%AB%AF/Vue/" class="category-chain-item">Vue</a>
   
   
 
@@ -344,8 +409,6 @@ devDependencies - dev环境需要的生产不需要的包，命令中添加-D</p
         <a href="/tags/%E5%89%8D%E7%AB%AF/">#前端</a>
       
         <a href="/tags/Vue/">#Vue</a>
-      
-        <a href="/tags/webpack/">#webpack</a>
       
     </div>
   
@@ -400,7 +463,7 @@ devDependencies - dev环境需要的生产不需要的包，命令中添加-D</p
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/06/02/front/vue/vue/" title="vue基础知识">
+                      <a href="/2021/06/05/front/vue/vue/" title="vue基础知识">
                         <i class="iconfont icon-arrowleft"></i>
                         <span class="hidden-mobile">vue基础知识</span>
                         <span class="visible-mobile">上一篇</span>

@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html lang="zh-CN" data-default-color-scheme=auto>
+<html lang="zh-CN" data-default-color-scheme=light>
 
 
 
@@ -19,12 +19,12 @@
     <meta name="description" content="前言 概述：Vue是一套构建用户界面的 渐进式框架。与其他重量级框架不同的是，Vue 采用自底向上增量开发的设计。Vue 的核心库只关注视图层，并且非常容易学习，非常容易与其它库或已有项目整合。另一方面，Vue 完全有能力驱动采用单文件组件和 Vue 生态系统支持的库开发的复杂单页应用。Vue.js 的目标是通过尽可能简单的 API 实现响应的数据绑定和组合的视图组件。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vue基础知识">
-<meta property="og:url" content="https://www.zengzx.xyz/2021/06/02/front/vue/vue/index.html">
+<meta property="og:url" content="https://www.zengzx.xyz/2021/06/05/front/vue/vue/index.html">
 <meta property="og:site_name" content="小熊的小窝">
 <meta property="og:description" content="前言 概述：Vue是一套构建用户界面的 渐进式框架。与其他重量级框架不同的是，Vue 采用自底向上增量开发的设计。Vue 的核心库只关注视图层，并且非常容易学习，非常容易与其它库或已有项目整合。另一方面，Vue 完全有能力驱动采用单文件组件和 Vue 生态系统支持的库开发的复杂单页应用。Vue.js 的目标是通过尽可能简单的 API 实现响应的数据绑定和组合的视图组件。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-06-02T14:11:23.000Z">
-<meta property="article:modified_time" content="2022-05-30T05:42:47.181Z">
+<meta property="article:published_time" content="2021-06-05T14:11:23.000Z">
+<meta property="article:modified_time" content="2022-06-01T09:37:12.809Z">
 <meta property="article:author" content="Eden">
 <meta property="article:tag" content="前端">
 <meta property="article:tag" content="Vue">
@@ -70,7 +70,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"www.zengzx.xyz","root":"/","version":"1.9.0","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"www.zengzx.xyz","root":"/","version":"1.9.0","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":10},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -206,8 +206,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2021-06-02 22:11" pubdate>
-          2021年6月2日 晚上
+        <time datetime="2021-06-05 22:11" pubdate>
+          2021年6月5日 晚上
         </time>
       </span>
     
@@ -218,7 +218,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.4k 字
+          2.5k 字
         
       </span>
     
@@ -351,9 +351,8 @@ Mustache 语法不能作用在 HTML attribute 上，遇到这种情况应该使�
 </ol>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs HTML"><span class="hljs-comment">&lt;!-- 完整语法 --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">v-on:click</span>=<span class="hljs-string">&quot;doSomething&quot;</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><br><br><span class="hljs-comment">&lt;!-- 缩写 --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">a</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">&quot;doSomething&quot;</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><br><br><span class="hljs-comment">&lt;!-- 动态参数的缩写 (2.6.0+) --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">a</span> @[<span class="hljs-attr">event</span>]=<span class="hljs-string">&quot;doSomething&quot;</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><br></code></pre></td></tr></table></figure>
 <h2 id="axios"><a class="header-anchor" href="#axios">¶</a>axios</h2>
-<p>网络请求库<br>
-GET：axios.get(url+key=value&amp;key=value).then(function(response){},function(error){})<br>
-POST：axios.post(url,{key:value,key:value}).then(function(response){},function(error){})</p>
+<p>网络请求库</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs js">GET：axios.get(url+key=value&amp;key=value).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">response</span>)</span>&#123;&#125;,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">error</span>)</span>&#123;&#125;)<br>POST：axios.post(url,&#123;<span class="hljs-attr">key</span>:value,<span class="hljs-attr">key</span>:value&#125;).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">response</span>)</span>&#123;&#125;,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">error</span>)</span>&#123;&#125;)<br></code></pre></td></tr></table></figure>
 
               
             </div>
@@ -371,12 +370,12 @@ POST：axios.post(url,{key:value,key:value}).then(function(response){},function(
     
       <span class="category-chain">
         
-  <a href="/categories/Vue/" class="category-chain-item">Vue</a>
+  <a href="/categories/%E5%89%8D%E7%AB%AF/" class="category-chain-item">前端</a>
   
   
     <span>></span>
     
-  <a href="/categories/Vue/%E5%89%8D%E7%AB%AF/" class="category-chain-item">前端</a>
+  <a href="/categories/%E5%89%8D%E7%AB%AF/Vue/" class="category-chain-item">Vue</a>
   
   
 
@@ -408,7 +407,7 @@ POST：axios.post(url,{key:value,key:value}).then(function(response){},function(
   <div class="license-box my-3">
     <div class="license-title">
       <div>vue基础知识</div>
-      <div>https://www.zengzx.xyz/2021/06/02/front/vue/vue/</div>
+      <div>https://www.zengzx.xyz/2021/06/05/front/vue/vue/</div>
     </div>
     <div class="license-meta">
       
@@ -420,7 +419,7 @@ POST：axios.post(url,{key:value,key:value}).then(function(response){},function(
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2021年6月2日</div>
+          <div>2021年6月5日</div>
         </div>
       
       
