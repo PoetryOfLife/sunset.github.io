@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>MySQL 语句优化</title>
+    <link href="/2022/05/31/mysql/mysql%E4%BC%98%E5%8C%96/"/>
+    <url>/2022/05/31/mysql/mysql%E4%BC%98%E5%8C%96/</url>
+    
+    <content type="html"><![CDATA[<h2 id="explain"><a class="header-anchor" href="#explain">¶</a>explain</h2><p>通过explain可以解析出mysql的执行计划</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>MySQL</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>MySQL</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>常用emoji</title>
     <link href="/2021/10/14/front/emoji/"/>
     <url>/2021/10/14/front/emoji/</url>
@@ -132,9 +157,9 @@
     
     <tags>
       
-      <tag>CSS</tag>
-      
       <tag>前端</tag>
+      
+      <tag>CSS</tag>
       
     </tags>
     
@@ -159,9 +184,9 @@
     
     <tags>
       
-      <tag>前端</tag>
-      
       <tag>HTML</tag>
+      
+      <tag>前端</tag>
       
     </tags>
     

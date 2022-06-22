@@ -16,23 +16,22 @@
   <meta name="author" content="Eden">
   <meta name="keywords" content="">
   
-    <meta name="description" content="前言 概述：JavaScript 是属于 HTML 和 Web 的编程语言，编程令计算机完成您需要它们做的工作，脱胎于Java">
+    <meta name="description" content="¶explain 通过explain可以解析出mysql的执行计划">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaScript基础">
-<meta property="og:url" content="https://www.zengzx.xyz/2016/03/22/front/JavaScript/index.html">
+<meta property="og:title" content="MySQL 语句优化">
+<meta property="og:url" content="https://www.zengzx.xyz/2022/05/31/mysql/mysql%E4%BC%98%E5%8C%96/index.html">
 <meta property="og:site_name" content="小熊的小窝">
-<meta property="og:description" content="前言 概述：JavaScript 是属于 HTML 和 Web 的编程语言，编程令计算机完成您需要它们做的工作，脱胎于Java">
+<meta property="og:description" content="¶explain 通过explain可以解析出mysql的执行计划">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2016-03-22T02:54:24.000Z">
-<meta property="article:modified_time" content="2022-05-30T03:17:46.853Z">
+<meta property="article:published_time" content="2022-05-31T01:46:30.000Z">
+<meta property="article:modified_time" content="2022-06-09T03:12:55.957Z">
 <meta property="article:author" content="Eden">
-<meta property="article:tag" content="前端">
-<meta property="article:tag" content="JavaScript">
+<meta property="article:tag" content="MySQL">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>JavaScript基础 - 小熊的小窝</title>
+  <title>MySQL 语句优化 - 小熊的小窝</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -195,7 +194,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="JavaScript基础"></span>
+            <span id="subtitle" data-typed-text="MySQL 语句优化"></span>
           
         </div>
 
@@ -206,8 +205,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2016-03-22 10:54" pubdate>
-          2016年3月22日 上午
+        <time datetime="2022-05-31 09:46" pubdate>
+          2022年5月31日 上午
         </time>
       </span>
     
@@ -218,7 +217,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1k 字
+          32 字
         
       </span>
     
@@ -229,7 +228,7 @@
         
         
         
-          9 分钟
+          1 分钟
         
       </span>
     
@@ -267,103 +266,12 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">JavaScript基础</h1>
+            <h1 style="display: none">MySQL 语句优化</h1>
             
             <div class="markdown-body">
               
-              <h1>前言</h1>
-<p>概述：JavaScript 是属于 HTML 和 Web 的编程语言，编程令计算机完成您需要它们做的工作，脱胎于Java</p>
-<span id="more"></span>
-<h2 id="一、JavaScript值"><a class="header-anchor" href="#一、JavaScript值">¶</a>一、JavaScript值</h2>
-<ol>
-<li>字面量<br>
-写数值有无小数点均可，字符串是文本，由双引号或单引号包围</li>
-<li>变量<br>
-变量用于存储数据值</li>
-<li>运算符<br>
-JavaScript 使用算数运算符（+ - * /）来计算值</li>
-<li>表达式<br>
-表达式是值、变量和运算符的组合，计算结果是值</li>
-<li>关键词<br>
-用于标识被执行的动作</li>
-<li>数据类型
-<ul>
-<li>字符串值</li>
-<li>数值</li>
-<li>布尔值</li>
-<li>数组</li>
-<li>对象</li>
-</ul>
-</li>
-<li>let和const<br>
-提供了块作用域（Block Scope）变量（和常量）,let 能重新赋值，但是const不能重新赋值</li>
-</ol>
-<h2 id="二、函数"><a class="header-anchor" href="#二、函数">¶</a>二、函数</h2>
-<p>函数是被设计为执行特定任务的代码块，会在某代码调用它时被执行</p>
-<h2 id="三、对象"><a class="header-anchor" href="#三、对象">¶</a>三、对象</h2>
-<p>和Java对象概念一样<br>
-包含属性和方法</p>
-<h2 id="四、事件"><a class="header-anchor" href="#四、事件">¶</a>四、事件</h2>
-<p>事件是发生在 HTML 元素上的“事情”。当在 HTML 页面中使用 JavaScript 时，JavaScript 能够“应对”这些事件。<br>
-HTML 事件可以是浏览器或用户做的某些事情。</p>
-<p>下面是 HTML 事件的一些例子：<br>
-HTML 网页完成加载<br>
-HTML 输入字段被修改<br>
-HTML 按钮被点击<br>
-通常，当事件发生时，用户会希望做某件事。<br>
-JavaScript 允许您在事件被侦测到时执行代码。</p>
-<p>常见事件：</p>
-<table>
-<thead>
-<tr>
-<th>事件</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>onchange</td>
-<td>HTML 元素已被改变</td>
-</tr>
-<tr>
-<td>onclick</td>
-<td>用户点击了 HTML 元素</td>
-</tr>
-<tr>
-<td>onmouseover</td>
-<td>用户把鼠标移动到 HTML 元素上</td>
-</tr>
-<tr>
-<td>onmouseout</td>
-<td>用户把鼠标移开 HTML 元素</td>
-</tr>
-<tr>
-<td>onkeydown</td>
-<td>用户按下键盘按键</td>
-</tr>
-<tr>
-<td>onload</td>
-<td>浏览器已经完成页面加载</td>
-</tr>
-</tbody>
-</table>
-<h2 id="五、字符串"><a class="header-anchor" href="#五、字符串">¶</a>五、字符串</h2>
-<p>字符串用于存储和操作文本<br>
-内建属性 length 可返回字符串的长度<br>
-indexOf() 方法返回字符串中指定文本首次出现的索引（位置）<br>
-lastIndexOf() 方法返回指定文本在字符串中最后一次出现的索引<br>
-search()</p>
-<h2 id="六、数组"><a class="header-anchor" href="#六、数组">¶</a>六、数组</h2>
-<p>toString() 把数组转换为数组值（逗号分隔）的字符串。<br>
-join() 方法也可将所有数组元素结合为一个字符串。<br>
-pop() 方法从数组中删除最后一个元素<br>
-push() 方法（在数组结尾处）向数组添加一个新的元素<br>
-shift() 方法会删除首个数组元素，并把所有其他元素“位移”到更低的索引<br>
-unshift() 方法（在开头）向数组添加新元素，并“反向位移”旧元素<br>
-splice() 方法可用于向数组添加新项<br>
-concat() 方法通过合并（连接）现有数组来创建一个新数组<br>
-sort() 方法以字母顺序对数组进行排序<br>
-reverse() 方法反转数组中的元素</p>
+              <h2 id="explain"><a class="header-anchor" href="#explain">¶</a>explain</h2>
+<p>通过explain可以解析出mysql的执行计划</p>
 
               
             </div>
@@ -381,7 +289,7 @@ reverse() 方法反转数组中的元素</p>
     
       <span class="category-chain">
         
-  <a href="/categories/%E5%89%8D%E7%AB%AF/" class="category-chain-item">前端</a>
+  <a href="/categories/MySQL/" class="category-chain-item">MySQL</a>
   
   
 
@@ -396,9 +304,7 @@ reverse() 方法反转数组中的元素</p>
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E5%89%8D%E7%AB%AF/">#前端</a>
-      
-        <a href="/tags/JavaScript/">#JavaScript</a>
+        <a href="/tags/MySQL/">#MySQL</a>
       
     </div>
   
@@ -410,8 +316,8 @@ reverse() 方法反转数组中的元素</p>
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>JavaScript基础</div>
-      <div>https://www.zengzx.xyz/2016/03/22/front/JavaScript/</div>
+      <div>MySQL 语句优化</div>
+      <div>https://www.zengzx.xyz/2022/05/31/mysql/mysql优化/</div>
     </div>
     <div class="license-meta">
       
@@ -423,7 +329,7 @@ reverse() 方法反转数组中的元素</p>
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2016年3月22日</div>
+          <div>2022年5月31日</div>
         </div>
       
       
@@ -453,18 +359,12 @@ reverse() 方法反转数组中的元素</p>
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/06/01/front/vue/webPack/" title="WebPack自动化构建">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">WebPack自动化构建</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2016/03/17/front/CSS/" title="CSS基础">
-                        <span class="hidden-mobile">CSS基础</span>
+                      <a href="/2021/10/14/front/emoji/" title="常用emoji">
+                        <span class="hidden-mobile">常用emoji</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
