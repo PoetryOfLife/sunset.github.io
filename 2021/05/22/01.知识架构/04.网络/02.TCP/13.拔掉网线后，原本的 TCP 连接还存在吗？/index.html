@@ -19,7 +19,7 @@
     <meta name="description" content="拔掉网线后，原本的 TCP 连接还存在吗？ 今天，聊一个有趣的问题：拔掉网线几秒，再插回去，原本的 TCP 连接还存在吗？ 可能有的同学会说，网线都被拔掉了，那说明物理层被断开了，那在上层的传输层理应也会断开，所以原本的 TCP 连接就不会存在的了。就好像， 我们拨打有线电话的时候，如果某一方的电话线被拔了，那么本次通话就彻底断了。 真的是这样吗？ 上面这个逻辑就有问题。问题在于，错误的认为拔掉网">
 <meta property="og:type" content="article">
 <meta property="og:title" content="拔掉网线后，原本的 TCP 连接还存在吗？">
-<meta property="og:url" content="https://www.zengzx.xyz/2021/05/18/01.%E7%9F%A5%E8%AF%86%E6%9E%B6%E6%9E%84/04.%E7%BD%91%E7%BB%9C/02.TCP/13.%E6%8B%94%E6%8E%89%E7%BD%91%E7%BA%BF%E5%90%8E%EF%BC%8C%E5%8E%9F%E6%9C%AC%E7%9A%84%20TCP%20%E8%BF%9E%E6%8E%A5%E8%BF%98%E5%AD%98%E5%9C%A8%E5%90%97%EF%BC%9F/index.html">
+<meta property="og:url" content="https://www.zengzx.xyz/2021/05/22/01.%E7%9F%A5%E8%AF%86%E6%9E%B6%E6%9E%84/04.%E7%BD%91%E7%BB%9C/02.TCP/13.%E6%8B%94%E6%8E%89%E7%BD%91%E7%BA%BF%E5%90%8E%EF%BC%8C%E5%8E%9F%E6%9C%AC%E7%9A%84%20TCP%20%E8%BF%9E%E6%8E%A5%E8%BF%98%E5%AD%98%E5%9C%A8%E5%90%97%EF%BC%9F/index.html">
 <meta property="og:site_name" content="小熊的小窝">
 <meta property="og:description" content="拔掉网线后，原本的 TCP 连接还存在吗？ 今天，聊一个有趣的问题：拔掉网线几秒，再插回去，原本的 TCP 连接还存在吗？ 可能有的同学会说，网线都被拔掉了，那说明物理层被断开了，那在上层的传输层理应也会断开，所以原本的 TCP 连接就不会存在的了。就好像， 我们拨打有线电话的时候，如果某一方的电话线被拔了，那么本次通话就彻底断了。 真的是这样吗？ 上面这个逻辑就有问题。问题在于，错误的认为拔掉网">
 <meta property="og:locale" content="zh_CN">
@@ -28,8 +28,8 @@
 <meta property="og:image" content="https://cdn.xiaolincoding.com//mysql/other/10fa6882db83aee68f246c04fcb7d760.png">
 <meta property="og:image" content="https://cdn.xiaolincoding.com//mysql/other/46906e588260607680db43a68fe00278.png">
 <meta property="og:image" content="https://cdn.xiaolincoding.com//mysql/other/c881f163091a4c6427d68b7144c3a980.png">
-<meta property="article:published_time" content="2021-05-18T12:21:19.000Z">
-<meta property="article:modified_time" content="2023-08-24T06:39:08.516Z">
+<meta property="article:published_time" content="2021-05-22T12:21:19.000Z">
+<meta property="article:modified_time" content="2023-08-24T06:59:45.661Z">
 <meta property="article:author" content="Eden">
 <meta property="article:tag" content="TCP">
 <meta name="twitter:card" content="summary_large_image">
@@ -214,8 +214,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2021-05-18 20:21" pubdate>
-          2021年5月18日 晚上
+        <time datetime="2021-05-22 20:21" pubdate>
+          2021年5月22日 晚上
         </time>
       </span>
     
@@ -417,7 +417,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>拔掉网线后，原本的 TCP 连接还存在吗？</div>
-      <div>https://www.zengzx.xyz/2021/05/18/01.知识架构/04.网络/02.TCP/13.拔掉网线后，原本的 TCP 连接还存在吗？/</div>
+      <div>https://www.zengzx.xyz/2021/05/22/01.知识架构/04.网络/02.TCP/13.拔掉网线后，原本的 TCP 连接还存在吗？/</div>
     </div>
     <div class="license-meta">
       
@@ -429,7 +429,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2021年5月18日</div>
+          <div>2021年5月22日</div>
         </div>
       
       
@@ -461,9 +461,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/05/18/01.%E7%9F%A5%E8%AF%86%E6%9E%B6%E6%9E%84/04.%E7%BD%91%E7%BB%9C/02.TCP/12.TCP%20%E8%BF%9E%E6%8E%A5%EF%BC%8C%E4%B8%80%E7%AB%AF%E6%96%AD%E7%94%B5%E5%92%8C%E8%BF%9B%E7%A8%8B%E5%B4%A9%E6%BA%83%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB/" title="TCP 连接，一端断电和进程崩溃有什么区别">
+                      <a href="/2021/06/01/01.%E7%9F%A5%E8%AF%86%E6%9E%B6%E6%9E%84/front/vue/webPack/" title="WebPack自动化构建">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">TCP 连接，一端断电和进程崩溃有什么区别</span>
+                        <span class="hidden-mobile">WebPack自动化构建</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -471,8 +471,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/05/17/01.%E7%9F%A5%E8%AF%86%E6%9E%B6%E6%9E%84/04.%E7%BD%91%E7%BB%9C/02.TCP/08.SYN%20%E6%8A%A5%E6%96%87%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E6%83%85%E5%86%B5%E4%B8%8B%E4%BC%9A%E8%A2%AB%E4%B8%A2%E5%BC%83%EF%BC%9F/" title="SYN 报文什么时候情况下会被丢弃？">
-                        <span class="hidden-mobile">SYN 报文什么时候情况下会被丢弃？</span>
+                      <a href="/2021/05/21/01.%E7%9F%A5%E8%AF%86%E6%9E%B6%E6%9E%84/04.%E7%BD%91%E7%BB%9C/02.TCP/12.TCP%20%E8%BF%9E%E6%8E%A5%EF%BC%8C%E4%B8%80%E7%AB%AF%E6%96%AD%E7%94%B5%E5%92%8C%E8%BF%9B%E7%A8%8B%E5%B4%A9%E6%BA%83%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB/" title="TCP 连接，一端断电和进程崩溃有什么区别">
+                        <span class="hidden-mobile">TCP 连接，一端断电和进程崩溃有什么区别</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

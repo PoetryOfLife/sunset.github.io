@@ -16,22 +16,22 @@
   <meta name="author" content="Eden">
   <meta name="keywords" content="">
   
-    <meta name="description" content="五一假期计划 4月29日 深圳 路线：  早茶（未定） 10 点平安大厦 10:30 去东山码头 路程一个半小时 预计12点到达吃饭 13点出发海钓 17点回码头，休息后回福田 晚上可以去福田的清吧坐一下  准备晕船药、太阳镜、遮阳帽 4月30日 香港 路线：  过福田口岸 港铁 落马洲站 -&gt; 尖沙咀地铁站 星光大道 太平山缆车登顶 维多利亚港 回口岸  5月1日 珠海 湾仔旅游码头 5月">
+    <meta name="description" content="gRPC需不需要限制带宽，限制gRPC的流量 可以使用gRPC的服务配置选项来限制gRPC流量，包括设置每个客户端可以并发打开的流数量、每个流可以发送和接收的消息数量、每个消息的最大字节数量等。此外，还可以使用网络代理程序或负载均衡器来限制gRPC流量。gRPC的服务配置选项通常可以在服务端的gRPC配置文件中配置，也可以通过使用环境变量和代码API来动态配置。   怎么进行SQL优化的？">
 <meta property="og:type" content="article">
-<meta property="og:title" content="五一假期计划">
-<meta property="og:url" content="https://www.zengzx.xyz/2023/04/14/05.%E9%9A%8F%E7%AC%94/%E4%BA%94%E4%B8%80%E5%81%87%E6%9C%9F/index.html">
+<meta property="og:title" content="面经3">
+<meta property="og:url" content="https://www.zengzx.xyz/2023/03/01/04.%E9%9D%A2%E8%AF%95/01.%E9%9D%A2%E7%BB%8F/golang%E9%9D%A2%E8%AF%95-%E9%BA%A6%E9%83%BD/index.html">
 <meta property="og:site_name" content="小熊的小窝">
-<meta property="og:description" content="五一假期计划 4月29日 深圳 路线：  早茶（未定） 10 点平安大厦 10:30 去东山码头 路程一个半小时 预计12点到达吃饭 13点出发海钓 17点回码头，休息后回福田 晚上可以去福田的清吧坐一下  准备晕船药、太阳镜、遮阳帽 4月30日 香港 路线：  过福田口岸 港铁 落马洲站 -&gt; 尖沙咀地铁站 星光大道 太平山缆车登顶 维多利亚港 回口岸  5月1日 珠海 湾仔旅游码头 5月">
+<meta property="og:description" content="gRPC需不需要限制带宽，限制gRPC的流量 可以使用gRPC的服务配置选项来限制gRPC流量，包括设置每个客户端可以并发打开的流数量、每个流可以发送和接收的消息数量、每个消息的最大字节数量等。此外，还可以使用网络代理程序或负载均衡器来限制gRPC流量。gRPC的服务配置选项通常可以在服务端的gRPC配置文件中配置，也可以通过使用环境变量和代码API来动态配置。   怎么进行SQL优化的？">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-04-14T08:43:21.000Z">
-<meta property="article:modified_time" content="2023-08-15T02:35:25.557Z">
+<meta property="article:published_time" content="2023-03-01T02:15:58.000Z">
+<meta property="article:modified_time" content="2023-08-24T07:01:28.512Z">
 <meta property="article:author" content="Eden">
-<meta property="article:tag" content="五一假期计划">
+<meta property="article:tag" content="面试">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>五一假期计划 - 小熊的小窝</title>
+  <title>面经3 - 小熊的小窝</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -197,7 +197,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="五一假期计划"></span>
+            <span id="subtitle" data-typed-text="面经3"></span>
           
         </div>
 
@@ -208,8 +208,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-04-14 16:43" pubdate>
-          2023年4月14日 下午
+        <time datetime="2023-03-01 10:15" pubdate>
+          2023年3月1日 上午
         </time>
       </span>
     
@@ -220,7 +220,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          170 字
+          242 字
         
       </span>
     
@@ -231,7 +231,7 @@
         
         
         
-          2 分钟
+          3 分钟
         
       </span>
     
@@ -269,37 +269,26 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">五一假期计划</h1>
+            <h1 style="display: none">面经3</h1>
             
             
               <div class="markdown-body">
                 
-                <h1>五一假期计划</h1>
-<h2 id="4月29日-深圳">4月29日 深圳</h2>
-<p><strong>路线</strong>：</p>
-<ul>
-<li>早茶（未定）</li>
-<li>10 点平安大厦</li>
-<li>10:30 去东山码头 路程一个半小时</li>
-<li>预计12点到达吃饭</li>
-<li>13点出发海钓</li>
-<li>17点回码头，休息后回福田</li>
-<li>晚上可以去福田的清吧坐一下</li>
-</ul>
-<p>准备晕船药、太阳镜、遮阳帽</p>
-<h2 id="4月30日-香港">4月30日 香港</h2>
-<p><strong>路线</strong>：</p>
-<ul>
-<li>过福田口岸</li>
-<li>港铁 落马洲站 -&gt; 尖沙咀地铁站</li>
-<li>星光大道</li>
-<li>太平山缆车登顶</li>
-<li>维多利亚港</li>
-<li>回口岸</li>
-</ul>
-<h2 id="5月1日-珠海">5月1日 珠海</h2>
-<p>湾仔旅游码头</p>
-<h2 id="5月2日-澳门">5月2日 澳门</h2>
+                <ol>
+<li>
+<p>gRPC需不需要限制带宽，限制gRPC的流量</p>
+<p>可以使用gRPC的服务配置选项来限制gRPC流量，包括设置每个客户端可以并发打开的流数量、每个流可以发送和接收的消息数量、每个消息的最大字节数量等。此外，还可以使用网络代理程序或负载均衡器来限制gRPC流量。gRPC的服务配置选项通常可以在服务端的gRPC配置文件中配置，也可以通过使用环境变量和代码API来动态配置。</p>
+</li>
+<li>
+<p>怎么进行SQL优化的？</p>
+</li>
+<li>
+<p>context包的使用，并发的去查询orm和redis，需不要进行处理</p>
+</li>
+<li>
+<p>敏感词算法，怎么实现的匹配机制</p>
+</li>
+</ol>
 
                 
               </div>
@@ -318,7 +307,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E4%BA%94%E4%B8%80%E5%81%87%E6%9C%9F%E8%AE%A1%E5%88%92/" class="category-chain-item">五一假期计划</a>
+  <a href="/categories/%E9%9D%A2%E8%AF%95/" class="category-chain-item">面试</a>
   
   
 
@@ -333,7 +322,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E4%BA%94%E4%B8%80%E5%81%87%E6%9C%9F%E8%AE%A1%E5%88%92/">#五一假期计划</a>
+        <a href="/tags/%E9%9D%A2%E8%AF%95/">#面试</a>
       
     </div>
   
@@ -345,8 +334,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>五一假期计划</div>
-      <div>https://www.zengzx.xyz/2023/04/14/05.随笔/五一假期/</div>
+      <div>面经3</div>
+      <div>https://www.zengzx.xyz/2023/03/01/04.面试/01.面经/golang面试-麦都/</div>
     </div>
     <div class="license-meta">
       
@@ -358,7 +347,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年4月14日</div>
+          <div>2023年3月1日</div>
         </div>
       
       
@@ -390,9 +379,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/08/15/04.%E9%9D%A2%E8%AF%95/01.%E9%9D%A2%E7%BB%8F/golang%E9%9D%A2%E8%AF%95-%E9%BA%A6%E9%83%BD/" title="golang面试-麦都">
+                      <a href="/2023/03/01/01.%E7%9F%A5%E8%AF%86%E6%9E%B6%E6%9E%84/01.Go/01.%E5%9F%BA%E7%A1%80/04.context/" title="context">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">golang面试-麦都</span>
+                        <span class="hidden-mobile">context</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -400,8 +389,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/04/06/01.%E7%9F%A5%E8%AF%86%E6%9E%B6%E6%9E%84/03.redis/01.redis%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98/" title="常见面试题">
-                        <span class="hidden-mobile">常见面试题</span>
+                      <a href="/2023/03/01/04.%E9%9D%A2%E8%AF%95/01.%E9%9D%A2%E7%BB%8F/golang%E9%9D%A2%E8%AF%951/" title="面经3">
+                        <span class="hidden-mobile">面经3</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

@@ -226,15 +226,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2023/03/01/01.%E7%9F%A5%E8%AF%86%E6%9E%B6%E6%9E%84/01.Go/01.%E5%9F%BA%E7%A1%80/05.nethttp/" target="_self">
-          net/http
+        <a href="/2023/03/01/04.%E9%9D%A2%E8%AF%95/01.%E9%9D%A2%E7%BB%8F/golang%E9%9D%A2%E8%AF%95-%E9%BA%A6%E9%83%BD/" target="_self">
+          面经3
         </a>
       </h1>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/03/01/01.%E7%9F%A5%E8%AF%86%E6%9E%B6%E6%9E%84/01.Go/01.%E5%9F%BA%E7%A1%80/05.nethttp/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/03/01/04.%E9%9D%A2%E8%AF%95/01.%E9%9D%A2%E7%BB%8F/golang%E9%9D%A2%E8%AF%95-%E9%BA%A6%E9%83%BD/" target="_self">
         <div>
-          1. http   request读取body的时候，只能读一次，如果需要读两次，需要进行一次copy，将原始数据copy到一个新的变量。   GetBody()原则上是可以多次读取，但是在原生的http.Request里面，这是个nil。   r.URL.Query()能获取url中携带的参数   header需要注意go会自动把key首字符改成大写   ParseForm()后的值，存在r.F
+          gRPC需不需要限制带宽，限制gRPC的流量 可以使用gRPC的服务配置选项来限制gRPC流量，包括设置每个客户端可以并发打开的流数量、每个流可以发送和接收的消息数量、每个消息的最大字节数量等。此外，还可以使用网络代理程序或负载均衡器来限制gRPC流量。gRPC的服务配置选项通常可以在服务端的gRPC配置文件中配置，也可以通过使用环境变量和代码API来动态配置。   怎么进行SQL优化的？
         </div>
       </a>
 
@@ -242,7 +242,7 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2023-03-01 23:06" pubdate>
+            <time datetime="2023-03-01 10:15" pubdate>
               2023-03-01
             </time>
           </div>
@@ -258,7 +258,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/Go/" class="category-chain-item">Go</a>
+  <a href="/categories/%E9%9D%A2%E8%AF%95/" class="category-chain-item">面试</a>
   
   
 
@@ -273,7 +273,7 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Go/">#Go</a>
+              <a href="/tags/%E9%9D%A2%E8%AF%95/">#面试</a>
             
           </div>
         
@@ -287,15 +287,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2023/03/01/01.%E7%9F%A5%E8%AF%86%E6%9E%B6%E6%9E%84/01.Go/01.%E5%9F%BA%E7%A1%80/04.context/" target="_self">
-          context
+        <a href="/2023/03/01/04.%E9%9D%A2%E8%AF%95/01.%E9%9D%A2%E7%BB%8F/golang%E9%9D%A2%E8%AF%951/" target="_self">
+          面经3
         </a>
       </h1>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/03/01/01.%E7%9F%A5%E8%AF%86%E6%9E%B6%E6%9E%84/01.Go/01.%E5%9F%BA%E7%A1%80/04.context/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/03/01/04.%E9%9D%A2%E8%AF%95/01.%E9%9D%A2%E7%BB%8F/golang%E9%9D%A2%E8%AF%951/" target="_self">
         <div>
-          一、应用场景 在 Go http 包的 Server 中，每一个请求在都有一个对应的goroutine去处理。请求处理函数通常会启动额外的goroutine用来访问后端服务，比如数据库和 RPC 服务。用来处理一个请求的goroutine通常需要访问一些与请求特定的数据，比如终端用户的身份认证信息、验证相关的 token、请求的截止时间。当一个请求被取消或超时时，所有用来处理该请求的gorouti
+          自我介绍 说说对协程的理解（GMP机制） 在主协程和子协程间，有什么方式可以实现通信？（channel，context） sync.Pool的理解 你对gin框架的理解，为什么会这么快 gRPC使用的协议是什么，二进制通信使用的是什么协议 K8S master节点上主要的组件有哪些 就绪指针 Pod 和 container的关系 container之间是怎么通信的 cluster IP K8S
         </div>
       </a>
 
@@ -303,7 +303,7 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2023-03-01 10:24" pubdate>
+            <time datetime="2023-03-01 10:15" pubdate>
               2023-03-01
             </time>
           </div>
@@ -319,7 +319,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/Go/" class="category-chain-item">Go</a>
+  <a href="/categories/%E9%9D%A2%E8%AF%95/" class="category-chain-item">面试</a>
   
   
 
@@ -334,7 +334,7 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Go/">#Go</a>
+              <a href="/tags/%E9%9D%A2%E8%AF%95/">#面试</a>
             
           </div>
         
@@ -349,7 +349,7 @@
       <h1 class="index-header">
         
         <a href="/2023/03/01/04.%E9%9D%A2%E8%AF%95/01.%E9%9D%A2%E7%BB%8F/golang%E9%9D%A2%E8%AF%952/" target="_self">
-          面经2
+          面经3
         </a>
       </h1>
 
@@ -531,128 +531,6 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2023/02/27/04.%E9%9D%A2%E8%AF%95/01.%E9%9D%A2%E7%BB%8F/golang%E9%9D%A2%E8%AF%951/" target="_self">
-          面经1
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/02/27/04.%E9%9D%A2%E8%AF%95/01.%E9%9D%A2%E7%BB%8F/golang%E9%9D%A2%E8%AF%951/" target="_self">
-        <div>
-          自我介绍 说说对协程的理解（GMP机制） 在主协程和子协程间，有什么方式可以实现通信？（channel，context） sync.Pool的理解 你对gin框架的理解，为什么会这么快 gRPC使用的协议是什么，二进制通信使用的是什么协议 K8S master节点上主要的组件有哪些 就绪指针 Pod 和 container的关系 container之间是怎么通信的 cluster IP K8S
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2023-02-27 18:45" pubdate>
-              2023-02-27
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E9%9D%A2%E8%AF%95/" class="category-chain-item">面试</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E9%9D%A2%E8%AF%95/">#面试</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2022/12/01/02.%E8%AE%B0%E5%BD%95/03.%E9%97%AE%E9%A2%98/01.%E6%9C%AA%E8%A7%A3%E7%AD%94%E9%97%AE%E9%A2%98/" target="_self">
-          问题记录
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2022/12/01/02.%E8%AE%B0%E5%BD%95/03.%E9%97%AE%E9%A2%98/01.%E6%9C%AA%E8%A7%A3%E7%AD%94%E9%97%AE%E9%A2%98/" target="_self">
-        <div>
-          问题记录  redis的强一致性怎么保证？
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-12-01 22:11" pubdate>
-              2022-12-01
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E8%AE%B0%E5%BD%95/" class="category-chain-item">记录</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E8%AE%B0%E5%BD%95/">#记录</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
         <a href="/2022/12/01/02.%E8%AE%B0%E5%BD%95/02.%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/01.%E8%AE%B0%E5%BD%95/" target="_self">
           问题记录
         </a>
@@ -775,6 +653,67 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
+        <a href="/2022/12/01/02.%E8%AE%B0%E5%BD%95/03.%E9%97%AE%E9%A2%98/01.%E6%9C%AA%E8%A7%A3%E7%AD%94%E9%97%AE%E9%A2%98/" target="_self">
+          问题记录
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2022/12/01/02.%E8%AE%B0%E5%BD%95/03.%E9%97%AE%E9%A2%98/01.%E6%9C%AA%E8%A7%A3%E7%AD%94%E9%97%AE%E9%A2%98/" target="_self">
+        <div>
+          问题记录  redis的强一致性怎么保证？
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-12-01 22:11" pubdate>
+              2022-12-01
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E8%AE%B0%E5%BD%95/" class="category-chain-item">记录</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E8%AE%B0%E5%BD%95/">#记录</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
         <a href="/2022/12/01/01.%E7%9F%A5%E8%AF%86%E6%9E%B6%E6%9E%84/%E5%BE%AE%E6%9C%8D%E5%8A%A1/3.gRPC/" target="_self">
           gRPC
         </a>
@@ -823,6 +762,67 @@
             <i class="iconfont icon-tags"></i>
             
               <a href="/tags/gRPC/">#gRPC</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2022/12/01/01.%E7%9F%A5%E8%AF%86%E6%9E%B6%E6%9E%84/%E9%89%B4%E6%9D%83%E6%9C%BA%E5%88%B6/01.jwt/" target="_self">
+          JWT
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2022/12/01/01.%E7%9F%A5%E8%AF%86%E6%9E%B6%E6%9E%84/%E9%89%B4%E6%9D%83%E6%9C%BA%E5%88%B6/01.jwt/" target="_self">
+        <div>
+          1. 摘要 JSON Web Token（缩写 JWT）是目前最流行的跨域认证解决方案，本质就是一个字符串书写规范，作用是用来在用户和服务器之间传递安全可靠的信息。 2. JWT是什么 根据维基百科的定义，JSON WEB Token（JWT，读作 [/dʒɒt/]），是一种基于JSON的、用于在网络上声明某种主张的令牌（token）。JWT通常由三部分组成: 头信息（header）, 消息体（p
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-12-01 09:46" pubdate>
+              2022-12-01
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/MySQL/" class="category-chain-item">MySQL</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/MySQL/">#MySQL</a>
             
           </div>
         
