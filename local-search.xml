@@ -598,6 +598,31 @@
   
   
   <entry>
+    <title>errgroup</title>
+    <link href="/2022/10/08/01.%E7%9F%A5%E8%AF%86%E6%9E%B6%E6%9E%84/01.Go/01.%E5%9F%BA%E7%A1%80/12.errgroup/"/>
+    <url>/2022/10/08/01.%E7%9F%A5%E8%AF%86%E6%9E%B6%E6%9E%84/01.Go/01.%E5%9F%BA%E7%A1%80/12.errgroup/</url>
+    
+    <content type="html"><![CDATA[<h1>一、errgroup</h1><p>把一个复杂的任务，尤其是依赖多个微服务rpc需要聚合数据的任务，分解为依赖和并行，依赖的意思是：需要上游a的数据才能访问下游b的数据进行组合。但是并行的意思为：分解为多个小任务并行执行，最终等全部执行完毕。</p><p>《待补充》</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Go</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Go</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>简历</title>
     <link href="/2022/09/26/04.%E9%9D%A2%E8%AF%95/%E7%AE%80%E5%8E%86/"/>
     <url>/2022/09/26/04.%E9%9D%A2%E8%AF%95/%E7%AE%80%E5%8E%86/</url>
